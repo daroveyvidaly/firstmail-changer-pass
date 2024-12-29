@@ -18,22 +18,22 @@
 
 1. Установите зависимости:
     ```bash
-pip install -r requirements.txt
-    ```
+    pip install -r requirements.txt
+    ````
 
 2. Получите свой **X-Api-ключ**:
    - Перейдите на [панель управления Firstmail API](https://firstmail.ltd/lk/api ) для генерации вашего API-ключа.
 
 3. Настройте свой API-ключ и параметры в файле "config.json".:
-    ```json
+   ```json
     {
-        "Главное": {
-            "Потоки": 1,
-"X-Api-ключ": ""
+        "Main": {
+            "Threads": 1,
+            "X-Api-Key": ""
         },
-"Пароль": {
-            "Generate_password": верно,
-"new_password": ""
+        "Password": {
+            "Generate_password": true,
+            "new_password": ""
         }
     }
     ```
@@ -44,7 +44,7 @@ pip install -r requirements.txt
 
 4. Запустите инструмент:
     ```bash
-python main.py
+    python main.py
     ```
 
 ---
@@ -61,12 +61,13 @@ python main.py
 Измените `config.json`, чтобы добавить свой API-ключ, и установите необходимое количество потоков:
 ```json
 {
-    "Главное": {
-        "Потоки": 1,
-"X-Api-Key": "ваш api-ключ"
+    "Main": {
+        "Threads": 1,
+        "X-Api-Key": "your-api-key"
     },
-"Пароль": {
-        "Generate_password": верно,
-"new_password": ""
+    "Password": {
+        "Generate_password": true,
+        "new_password": ""
     }
 }
+```
