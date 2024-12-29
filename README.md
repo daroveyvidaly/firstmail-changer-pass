@@ -50,10 +50,10 @@
 ---
 
 ### 📄 Поддерживаемые форматы ввода
-| Формат | Пример |
+| Format             | Example                                  |
 |--------------------|------------------------------------------|
-| `почта:передача` | `user@example.com:password123` |
-| `почта:передача:значение` | `user@example.com:password123:random_value` |
+| `mail:pass`        | `user@example.com:password123`          |
+| `mail:pass:value`  | `user@example.com:password123:random_value` |
 
 ---
 
