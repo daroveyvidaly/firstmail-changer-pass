@@ -1,72 +1,72 @@
-# Firstmail Password Changer
+# Программа для смены паролей Firstmail
 
-## Overview 🚀
-**Firstmail Password Changer** is a powerful, high-speed tool designed to change passwords for Firstmail accounts. It supports various formats of email-password combinations and leverages multithreading to deliver exceptional performance. Whether you're handling single or bulk requests, this tool provides smooth, error-handled execution with beautiful log output.
-
----
-
-### ✨ Features
-- **Multithreading Support**: Lightning-fast password changing, even for large batches.
-- **Flexible Email Format Handling**: Supports various formats including `mail|pass`, `mail:pass`, and `mail:pass:value`. The `value` field allows the user to add random or custom data as needed.
-- **Detailed Console Logs**: Clear, easy-to-read logs to keep track of operations.
-- **Smart Error Handling**: Thoughtful error messages and recovery mechanisms to ensure smooth operation.
-- **Password Options**: You can choose to generate a random password or set a custom one.
+## Обзор 🚀
+** Программа для смены паролей Firstmail** - это мощный, высокоскоростной инструмент, предназначенный для смены паролей для учетных записей Firstmail. Он поддерживает различные форматы комбинаций электронной почты и паролей и использует многопоточность для обеспечения исключительной производительности. Независимо от того, обрабатываете ли вы одиночные или массовые запросы, этот инструмент обеспечивает плавное выполнение без ошибок и красивый вывод журнала.
 
 ---
 
-### ⚙️ Setup & Usage
+### ✨ Особенности
+- ** Поддержка многопоточности **: Молниеносная смена пароля даже для больших пакетов.
+- ** Гибкая обработка форматов электронной почты **: Поддерживает различные форматы, включая "почта|пропуск", "почта:пропуск" и "почта:пропуск:значение". Поле "значение" позволяет пользователю добавлять случайные или пользовательские данные по мере необходимости.
+- **Подробные журналы консоли **: Понятные, легко читаемые журналы для отслеживания операций.
+- ** Интеллектуальная обработка ошибок **: Продуманные сообщения об ошибках и механизмы восстановления для обеспечения бесперебойной работы.
+- ** Параметры пароля **: Вы можете сгенерировать случайный пароль или установить пользовательский.
 
-1. Install dependencies:
-    ```bash
-    pip install -r requirements.txt
+---
+
+### ⚙️ Настройка и использование
+
+1. Установите зависимости:
+    ``bash
+pip install -r requirements.txt
     ```
 
-2. Get your **X-Api-Key**:
-   - Head over to [Firstmail API Dashboard](https://firstmail.ltd/lk/api) to generate your API key.
+2. Получите свой **X-Api-ключ**:
+   - Перейдите на [панель управления Firstmail API](https://firstmail.ltd/lk/api ) для генерации вашего API-ключа.
 
-3. Configure your API key and settings in `config.json`:
-    ```json
+3. Настройте свой API-ключ и параметры в файле "config.json".:
+    ``джон
     {
-        "Main": {
-            "Threads": 1,
-            "X-Api-Key": ""
+        "Главное": {
+            "Потоки": 1,
+"X-Api-ключ": ""
         },
-        "Password": {
-            "Generate_password": true,
-            "new_password": ""
+"Пароль": {
+            "Generate_password": верно,
+"new_password": ""
         }
     }
     ```
 
-   - In the `Password` section:
-     - Set `"Generate_password"` to `true` if you want to generate a random password.
-     - Set `"Generate_password"` to `false` and provide your desired password in `"new_password"` if you want to use a custom one.
+   - В разделе `Пароль`:
+     - Установите для параметра "Generate_password" значение "true", если вы хотите сгенерировать случайный пароль.
+     - Установите для параметра "Generate_password" значение "false" и введите желаемый пароль в поле "new_password", если вы хотите использовать пользовательский пароль.
 
-4. Run the tool:
-    ```bash
-    python main.py
+4. Запустите инструмент:
+    ``bash
+python main.py
     ```
 
 ---
 
-### 📄 Supported Input Formats
-| Format             | Example                                  |
+### 📄 Поддерживаемые форматы ввода
+| Формат | Пример |
 |--------------------|------------------------------------------|
-| `mail:pass`        | `user@example.com:password123`          |
-| `mail:pass:value`  | `user@example.com:password123:random_value` |
+| `почта:передача` | `user@example.com:password123` |
+| `почта:передача:значение` | `user@example.com:password123:random_value` |
 
 ---
 
-### 🔧 Configuration
-Modify `config.json` to add your API key and set the number of threads as needed:
-```json
+### 🔧 Конфигурация
+Измените `config.json`, чтобы добавить свой API-ключ, и установите необходимое количество потоков:
+``джон
 {
-    "Main": {
-        "Threads": 1,
-        "X-Api-Key": "your-api-key"
+    "Главное": {
+        "Потоки": 1,
+"X-Api-Key": "ваш api-ключ"
     },
-    "Password": {
-        "Generate_password": true,
-        "new_password": ""
+"Пароль": {
+        "Generate_password": верно,
+"new_password": ""
     }
 }
